@@ -1,7 +1,14 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-layout:decorator="layouts/main">
+<!-- xmlns is used to use tags of thymeleaf  -->
+<!-- layout is used to indicate layout file -->
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layouts/main">
+<head>
+
+
+</head>
 <body>
 
 <div layout:fragment="content">
@@ -10,7 +17,7 @@ layout:decorator="layouts/main">
 		<div class="row">
 			<div class="col-md-12">
 				<h1 th:text="${message}"></h1>
-				<hr />				
+							
 				<h2><a th:href="@{/register}">Sign Up</a></h2>
 			</div>
 		</div>

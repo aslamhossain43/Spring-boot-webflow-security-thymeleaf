@@ -39,7 +39,8 @@ dependencies {
 	//compile('org.springframework.boot:spring-boot-starter-security')
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	compile('org.springframework.boot:spring-boot-starter-web')
-	
+	//js ajax to rendering view resolver for webflow
+	compile group: 'org.springframework.webflow', name: 'org.springframework.js', version: '2.0.5.RELEASE'
 	// https://mvnrepository.com/artifact/org.springframework.security/spring-security-core
 //compile group: 'org.springframework.security', name: 'spring-security-core', version: '5.0.6.RELEASE'
 	// https://mvnrepository.com/artifact/org.springframework.security/spring-security-config

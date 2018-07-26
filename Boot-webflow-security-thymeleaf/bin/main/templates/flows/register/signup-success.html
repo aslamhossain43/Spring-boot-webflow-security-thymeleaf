@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-
-<head th:replace="fragments/head :: head(title='Registration Page')"></head>
+<html  xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+layout:decorator="layouts/main">
 
 <body>
+<div layout:fragment="content">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
@@ -16,7 +18,7 @@
 			</div>
 		</div>
 	</div>
-	<script th:replace="fragments/scripts :: scripts"></script>
+	</div>
 </body>
 
 </html>
