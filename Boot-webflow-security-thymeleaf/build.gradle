@@ -36,16 +36,16 @@ configurations {
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
-	compile('org.springframework.boot:spring-boot-starter-security')
+	//compile('org.springframework.boot:spring-boot-starter-security')
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	
 	// https://mvnrepository.com/artifact/org.springframework.security/spring-security-core
-compile group: 'org.springframework.security', name: 'spring-security-core', version: '5.0.6.RELEASE'
+//compile group: 'org.springframework.security', name: 'spring-security-core', version: '5.0.6.RELEASE'
 	// https://mvnrepository.com/artifact/org.springframework.security/spring-security-config
-compile group: 'org.springframework.security', name: 'spring-security-config', version: '5.0.6.RELEASE'
+//compile group: 'org.springframework.security', name: 'spring-security-config', version: '5.0.6.RELEASE'
 	// https://mvnrepository.com/artifact/org.springframework.security/spring-security-web
-compile group: 'org.springframework.security', name: 'spring-security-web', version: '5.0.6.RELEASE'
+//compile group: 'org.springframework.security', name: 'spring-security-web', version: '5.0.6.RELEASE'
 // https://mvnrepository.com/artifact/org.springframework.webflow/spring-webflow
 compile group: 'org.springframework.webflow', name: 'spring-webflow', version: '2.5.0.RELEASE'
 
