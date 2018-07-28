@@ -15,4 +15,17 @@ public class HomeController {
 	}
 	
 	
+	
+	@RequestMapping(method = RequestMethod.GET, value = "/login")
+	public String login(Model model) {
+		model.addAttribute("message", "Hello, world!");
+		return "login";
+	}
+	@RequestMapping(method = RequestMethod.GET, value = "/hello")
+	public String hello(Model model) {
+		model.addAttribute("message", "Hello, world!");
+		return "hello";
+	}
+	
+	
 }

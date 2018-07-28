@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body class="security-app">
+	
+	<div class="lc-block">
+		<h1>
+			Hello <b th:text="${pageContext.request.remoteUser}"></b>
+		</h1>
+		<form th:action="@{/logout}" method="post">
+			<input type="submit" class="button red big" value="Sign Out" /> 
+			<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+		</form>
+	</div>
+
+</body>
+</html>

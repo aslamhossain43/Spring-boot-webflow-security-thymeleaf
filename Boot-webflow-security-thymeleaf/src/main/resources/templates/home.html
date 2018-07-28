@@ -1,18 +1,11 @@
 <!DOCTYPE html>
-<!-- xmlns is used to use tags of thymeleaf  -->
-<!-- layout is used to indicate layout file -->
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org"
-	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-	layout:decorator="layouts/main">
-<head>
 
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header-css :: header-css(title='Home Page')"></head>
 
-</head>
 <body>
-
-<div layout:fragment="content">
-  
+<div th:replace="fragments/carousel::carousel"></div>
+<div th:replace="fragments/nav-bar :: nav-bar"></div>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -22,7 +15,8 @@
 			</div>
 		</div>
 	</div>
-	</div>
+<div th:replace="fragments/footer-js"></div>
+
 </body>
 
 </html>

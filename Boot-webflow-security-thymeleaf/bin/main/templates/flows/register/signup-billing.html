@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html  xmlns="http://www.w3.org/1999/xhtml"
- xmlns:th="http://www.thymeleaf.org"
-xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-layout:decorator="layouts/main">
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header-css::header-css"></head>
 
 <body>
-<div layout:fragment="content">
+
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -32,7 +30,7 @@ layout:decorator="layouts/main">
 			</div>
 		</div>
 	</div>
-	</div>
+	<div th:replace="fragments/footer-js::footer-js"></div>
 </body>
 
 </html>

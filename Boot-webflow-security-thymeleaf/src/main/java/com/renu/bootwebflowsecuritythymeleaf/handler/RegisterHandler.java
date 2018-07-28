@@ -1,5 +1,6 @@
 package com.renu.bootwebflowsecuritythymeleaf.handler;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.binding.message.MessageBuilder;
 import org.springframework.binding.message.MessageContext;
 import org.springframework.stereotype.Component;
@@ -7,11 +8,16 @@ import org.springframework.stereotype.Component;
 import com.renu.bootwebflowsecuritythymeleaf.models.BillingInfo;
 import com.renu.bootwebflowsecuritythymeleaf.models.PersonalInfo;
 import com.renu.bootwebflowsecuritythymeleaf.models.RegisterModel;
+import com.renu.bootwebflowsecuritythymeleaf.repository.BillingInfoRepository;
+import com.renu.bootwebflowsecuritythymeleaf.repository.PersonalInfoRepository;
 
 
 @Component
 public class RegisterHandler {
-
+@Autowired
+	private PersonalInfoRepository personalInfoRepository;
+@Autowired	
+private BillingInfoRepository billingInfoRepository;
 	public RegisterModel init() {
 		return new RegisterModel();
 	}
@@ -27,15 +33,10 @@ public class RegisterHandler {
 	public String saveAll(RegisterModel registerModel, MessageContext error) {
 		String transitionValue = "success";
 
-		// XXX Save model in database or somewhere else...
-		error.addMessage(new MessageBuilder(). 
-				error() 
-				.source("registration") 
-				.defaultText( 
-						String.format("Couldn't register user with username: %s!",
-								registerModel.getPersonalInfo().getUsername())) 
-				.build());
-		transitionValue = "failure";
+BillingInfo billingInfo=registerModel.getBillingInfo();
+PersonalInfo personalInfo=registerModel.getPersonalInfo();
+personalInfoRepository.save(personalInfo);
+billingInfoRepository.save(billingInfo);
 
 		return transitionValue;
 	}

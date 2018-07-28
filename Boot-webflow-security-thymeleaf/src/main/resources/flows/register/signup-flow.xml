@@ -43,7 +43,6 @@
 	<action-state id="submit">
 		<evaluate expression="registerHandler.saveAll(flowScope.registerModel, messageContext)" />
 		<transition on="success" to="success" />
-		<transition on="failure" to="confirm" />
 	</action-state>
 
 	<!-- end state -->
