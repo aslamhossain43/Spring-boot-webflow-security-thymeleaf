@@ -41,6 +41,11 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	//js ajax to rendering view resolver for webflow
 	compile group: 'org.springframework.webflow', name: 'org.springframework.js', version: '2.0.5.RELEASE'
+//for security
+ compile group: 'org.thymeleaf.extras', name: 'thymeleaf-extras-springsecurity4'
+//automatic resource management
+ compile group: 'org.projectlombok', name: 'lombok'
+
 
    // https://mvnrepository.com/artifact/org.springframework.webflow/spring-webflow
    compile group: 'org.springframework.webflow', name: 'spring-webflow', version: '2.5.0.RELEASE'
