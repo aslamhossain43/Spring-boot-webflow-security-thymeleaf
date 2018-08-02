@@ -1,5 +1,6 @@
 package com.renu.bootwebflowsecuritythymeleaf.web.model;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -12,12 +13,9 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
-import lombok.Data;
-
 
 @Entity
 @Table(name = "user")
-@Data
 public class User {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
@@ -25,18 +23,16 @@ public class User {
   private Long id;
   private String username;
   private String password;
-  
   @ManyToMany(cascade=CascadeType.ALL)
   @JoinTable(name = "user_role",
              joinColumns = @JoinColumn(name = "user_id"),
              inverseJoinColumns = @JoinColumn(name = "role_id"))
   private Set<Role> roles;
 
-  
-  
-  public User() {
+ public User() {
 	// TODO Auto-generated constructor stub
 }
+
 public Long getId() {
 	return id;
 }
@@ -68,16 +64,10 @@ public Set<Role> getRoles() {
 public void setRoles(Set<Role> roles) {
 	this.roles = roles;
 }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
   
 }

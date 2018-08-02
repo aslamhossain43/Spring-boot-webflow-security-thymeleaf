@@ -11,12 +11,9 @@ import com.renu.bootwebflowsecuritythymeleaf.web.model.Role;
 import com.renu.bootwebflowsecuritythymeleaf.web.model.User;
 import com.renu.bootwebflowsecuritythymeleaf.web.repository.UserRepository;
 
-import lombok.extern.slf4j.Slf4j;
-
 
 
 @Service
-@Slf4j
 public class UserServiceImpl implements UserService {
   @Autowired
   private UserRepository userRepository;

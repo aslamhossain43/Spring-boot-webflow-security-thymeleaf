@@ -5,13 +5,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.Data;
-
 
 
 @Entity
 @Table(name="role")
-@Data
 public class Role {
   @Id
   @GeneratedValue
@@ -34,8 +31,7 @@ public String getName() {
 public void setName(String name) {
 	this.name = name;
 }
-  
-  
+ 
   
   
 }
